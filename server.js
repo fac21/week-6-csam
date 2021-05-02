@@ -8,6 +8,7 @@ const homepage = require("./routes/home.js");
 const logIn = require("./routes/logIn.js");
 const signUp = require("./routes/signUp.js");
 const posts = require("./routes/posts.js");
+const logOut = require("./routes/logOut.js");
 const bodyParser = express.urlencoded({ extended: false });
 
 server.use(cookieParser(process.env.COOKIE_SECRET));
@@ -24,6 +25,8 @@ server.get("/posts", posts.get);
 server.post("/posts", bodyParser, posts.post);
 
 server.post("/delete-post", bodyParser, posts.deletePost);
+
+server.post("/log-out", bodyParser, logOut.post);
 
 server.use((req, res) => {
   res.status(404).send("<h1>Not found</h1>");

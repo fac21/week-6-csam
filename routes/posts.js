@@ -6,14 +6,14 @@ function htmlPostForm() {
   return `
     <h1>Checkin'?</h1>
     <form action="/posts" method="POST">
-        <div>
+        <div class='text-area'>
             <label for="text_content"> Leave your question here! </label>
             <textarea name= "text_content" id="text_content" rows="4" cols="50" autofocus required>
             </textarea>
         </div>
         <button type="submit">Submit</button>
     </form>
-    <a href="/">Back to Homepage</a>
+    <a href="/" class='posts-link'>Back to Homepage</a>
     `;
 }
 

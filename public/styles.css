@@ -2,6 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   font-family: 'Reem Kufi';
 }
 
@@ -14,7 +15,6 @@ form {
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
-
 
 .logo {
   height: auto;
@@ -53,6 +53,10 @@ a {
   margin: auto;
   padding: 1rem;
 }
+.posts-link {
+  position: fixed;
+  bottom: 1rem;
+}
 
 a:hover {
   background-color: pink;
@@ -72,4 +76,7 @@ section{
 }
 div span{
   margin: 1rem;
+}
+.text-area {
+  flex-direction: column;
 }
